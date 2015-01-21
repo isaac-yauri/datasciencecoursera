@@ -17,7 +17,7 @@ For each record it is provided:
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 - Triaxial Angular velocity from the gyroscope. 
 - A 561-feature vector with time and frequency domain variables. 
-- Its activity label (activity_labels.txt). 
+- Its activity label (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING). 
 - An identifier of the subject who carried out the experiment.
 
 # Cleaning Data
