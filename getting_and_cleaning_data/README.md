@@ -1,7 +1,11 @@
 Course: Getting and Cleaning Data
+
 Certification: Data Science - Johns Hopkins University
+
 Project: Human Activity Recognition Using Smartphones Data Set
+
 Source: www.smartlab.ws
+
 Data Set: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
@@ -22,11 +26,18 @@ variables from the time and frequency domain. See 'features_info.txt' for more d
 Files:
 
 CodeBook.md       : Describes the variables, the data, and procedures to clean up the data.
+
 run_analysis.R    : Script in R to complete this steps.
+
                     1. Merges the training and the test sets to create one data set.
+                    
                     2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+                    
                     3. Uses descriptive activity names to name the activities in the data set
+                    
                     4. Appropriately labels the data set with descriptive variable names described in CodeBook.
-                    5. From the data set in step 4, creates a second, independent tidy data set (tidy.txt) with the average of each variable for each activity and each subject.
+                    
+                    5. From the data set in step 4, creates a second, independent tidy data set (tidy.txt) with the average
+                       of each variable for each activity and each subject.
 
 tidy.txt          : Tidy data after execute clean procedure on run_analysis.R
