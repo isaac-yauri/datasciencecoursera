@@ -31,7 +31,7 @@ We use run_analysis.R script to:
 - Appropriately labels the data set with descriptive variable names described on this document.
 - Create an independent tidy data set (tidy.txt) with the average of each variable for each activity and each subject.
 
-# Zip File Contect
+# Zip File Content
 
 The dataset includes the following files:
 
