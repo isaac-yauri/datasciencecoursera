@@ -1,6 +1,6 @@
 # datasciencecoursera
 
-this project is to store all activities from this certification on Coursera.
+This project is to store all activities from this certification on Coursera.
 
 Coursera : Data Science Certification
 
