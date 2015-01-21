@@ -40,4 +40,4 @@ run_analysis.R    : Script in R to complete this steps.
                     5. From the data set in step 4, creates a second, independent tidy data set (tidy.txt) with the average
                        of each variable for each activity and each subject.
 
-tidy.txt          : Tidy data after execute clean procedure on run_analysis.R
+tidy.txt          : Tidy data after execute clean procedure with script run_analysis.R
