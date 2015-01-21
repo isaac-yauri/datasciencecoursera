@@ -19,3 +19,15 @@ For each record it is provided:
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
 
+# Cleaning Data
+
+We use run_analysis.R script to:
+
+- Download original data source and unzip it.
+- Merges the training and the test sets to create one data set.
+- Extracts only the measurements on the mean and standard deviation for each measurement. 
+- Uses descriptive activity names to name the activities in the data set
+- Appropriately labels the data set with descriptive variable names described on this document.
+- Create an independent tidy data set (tidy.txt) with the average of each variable for each activity and each subject.
+
+
