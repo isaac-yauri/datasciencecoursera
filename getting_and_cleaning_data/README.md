@@ -1,3 +1,5 @@
+# Introduction
+
 Course: Getting and Cleaning Data
 
 Certification: Data Science - Johns Hopkins University
@@ -23,7 +25,7 @@ acceleration and gravity. The gravitational force is assumed to have only low fr
 filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating 
 variables from the time and frequency domain. See 'features_info.txt' for more details. 
 
-Files:
+# Files
 
 CodeBook.md       : Describes the variables, the data, and procedures to clean up the data.
 
@@ -41,3 +43,19 @@ run_analysis.R    : Script in R to complete this steps.
                        of each variable for each activity and each subject.
 
 tidy.txt          : Tidy data after execute clean procedure with script run_analysis.R
+
+# Executed Procedure by script
+
+- Original files downloaded from Web Page to ./data directory.
+- Unzip files
+- Merge activity files from training and test datasets (X_train and X_test)
+- Set varible names with features.txt
+- Filter variables with mean and standard deviation only
+- Merge subject files from training and test (subject_train.txt and subject_test.txt)
+- Set variable name to "subject"
+- Merge activity labels from training and test (y_train.txt and y_test.txt)
+- Set variable name to "labels"
+- Change current values on "labels" from 1:6 to labels on activity_labels.txt (descriptive variables)
+- Merge Activity, Subject and Activity Labels
+- Calculate the mean, and summarize by subject and activity_labels
+- Write results on /data/tidy.txt
