@@ -36,7 +36,7 @@ We use run_analysis.R script to:
 The dataset includes the following files:
 
 - 'features_info.txt'       : Shows information about the variables used on the feature vector.
-- 'features.txt'            : List of all features.
+- 'features.txt'            : The complete list of variables of each feature vector
 - 'activity_labels.txt'     : Links the class labels with their activity name (6 activities).
 - 'train/X_train.txt'       : Training Activity set.
 - 'train/y_train.txt'       : Training labels.
