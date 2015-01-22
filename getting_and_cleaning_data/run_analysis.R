@@ -5,6 +5,7 @@
 
 # Load Libraries
 library(dplyr)
+library(plyr)
 
 # Directory Verify
 if(!file.exists("./data"))  {dir.create("./data")}
@@ -25,17 +26,22 @@ unzip("./data/Dataset.zip", exdir = "./data")
 # 'train/subject_train.txt' : Each row identifies the subject who performed the activity for each window sample.
 # 'test/subject_test.txt'   : Each row identifies the subject who performed the activity for each window sample.
 #
-# Loading, Merging Activity Sets and set Varible names with features.txt
+# Loading, Merging Activity Sets
 train_activity <- read.table("./data/UCI HAR Dataset/train/X_train.txt", header = FALSE)
 test_activity  <- read.table("./data/UCI HAR Dataset/test/X_test.txt", header = FALSE)
 activity <- rbind(train_activity, test_activity)
-features <- read.csv("./data/UCI HAR Dataset/features.txt", sep="", header=FALSE, stringsAsFactors=FALSE)
-names(activity)<- features$V2
+
+# Set Varible names with features.txt and change with a descritive name
+features <- read.table("./data/UCI HAR Dataset/features.txt", sep="", header=FALSE, stringsAsFactors=FALSE)
+features[,2] <- gsub("\\(\\)", "", features[,2])
+features[,2] <- gsub("-","", features[,2])
+features[,2] <- gsub("^t", "time", features[,2])
+features[,2] <- gsub("^f", "frecuency", features[,2])
+names(activity)<- features[,2]
 
 # Extracts only the measurements on the mean and standard deviation for each measurement
-mean <- grep("mean", names(activity))
-std <- grep("std", names(activity))
-dataset <- cbind(activity[, mean], activity[, std])
+measurements <- grep("mean|std", names(activity))
+dataset <- cbind(activity[, measurements])
 
 # Loading and Merging Subjects (people) 
 train_subject <- read.table("./data/UCI HAR Dataset/train/subject_train.txt", header = FALSE)
