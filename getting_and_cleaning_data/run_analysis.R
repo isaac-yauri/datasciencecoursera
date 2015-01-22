@@ -5,7 +5,6 @@
 
 # Load Libraries
 library(dplyr)
-library(plyr)
 
 # Directory Verify
 if(!file.exists("./data"))  {dir.create("./data")}
